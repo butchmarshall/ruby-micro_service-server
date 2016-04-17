@@ -24,7 +24,7 @@ Or install it yourself as:
 then run
 
 ```ruby
-rails generate micro_service:active_record:server:active_record
+rails generate micro_service:server:active_record
 bundle exec rake db:migrate
 ```
 

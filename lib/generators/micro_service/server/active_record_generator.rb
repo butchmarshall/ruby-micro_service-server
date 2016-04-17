@@ -1,4 +1,4 @@
-require "generators/micro_service/server/add_on_generator"
+require "generators/micro_service/server/server_generator"
 require "generators/micro_service/server/next_migration_version"
 require "rails/generators/migration"
 require "rails/generators/active_record"
@@ -6,7 +6,7 @@ require "rails/generators/active_record"
 # Extend the HasDynamicColumnsGenerator so that it creates an AR migration
 module MicroService
 	class Server < ::ActiveRecord::Base
-		class ActiveRecordGenerator < ::Jive::AddOn::Generator
+		class ActiveRecordGenerator < ::MicroService::Server::Generator
 			include Rails::Generators::Migration
 			extend NextMigrationVersion
 
