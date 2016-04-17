@@ -25,6 +25,7 @@ then run
 
 ```ruby
 rails generate micro_service:active_record:server:active_record
+bundle exec rake db:migrate
 ```
 
 ## Usage
